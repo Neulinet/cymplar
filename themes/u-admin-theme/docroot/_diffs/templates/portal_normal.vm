@@ -15,7 +15,8 @@
 		<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
 		$theme.include($body_top_include)
 		
-		#dockbar()
+		## Removed since we do not need it
+		##dockbar()
 		
 		<div class="container-fluid" id="wrapper">	
 			#if ($is_signed_in)

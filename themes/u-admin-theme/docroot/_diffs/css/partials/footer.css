@@ -1,0 +1,45 @@
+@import "compass";
+@import "mixins";
+@import "aui_variables";
+
+
+/*----------------------
+	Sticky Footer
+-----------------------*/
+
+html, body, #wrapper {
+	height: 100%;
+}
+
+body > #wrapper {
+	height: auto; 
+	min-height: 100%;
+}
+
+#main {
+	padding-bottom: 30px;
+}  
+
+#footer {
+	position: relative;
+	margin-top: -31px; 
+	height: 30px;
+	clear:both;
+	background: $greyBg;
+	border-top: solid 1px $darkBorder;
+	text-align: right;
+	z-index: 300;
+	p {
+		font-size: 12px;			
+		text-align: center;
+		margin: 5px 0;
+		span {
+			color: $redText;
+		}
+		i {
+			color: #a94442;
+			margin: 0 3px;
+		}
+	}
+} 
+

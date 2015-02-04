@@ -1,0 +1,382 @@
+
+@media (max-width: 1450px) {
+	.aui{
+		.tabbable-content #contactForm .control-group select, 
+		.tabbable-content #contactForm .control-group textarea,
+		.tabbable-content #reportManagerForm .control-group select, 
+		.tabbable-content #reportManagerForm .control-group textarea,		
+		.tabbable-content #contactForm .control-group input[type="text"], 
+		.tabbable-content #reportManagerForm .control-group input[type="text"]
+		{
+			width: 100%;
+		}
+		.tabbable-content .yui3-aclist{
+			width: auto;
+		}
+	}
+}
+ 
+@media (min-width: 768px) and (max-width: 979px) {
+	.aui {
+		body {
+			padding: 0;
+		}
+		#content {
+			width: 100%;
+			float: none;
+			margin: 0;
+			padding: 0;
+		}		
+		#wrapper{
+			padding: 0;
+		}
+		#banner {
+			#heading {
+				bottom: inherit;
+				position: relative;
+				.dropdown-user {
+					.user-menu {
+						right: 40px;
+					}
+				}
+			}
+		}
+		#breadcrumbs {
+			margin: 0;
+		}
+		.dash-blocks {
+			padding: 0 5px;
+		}
+		/*---------- Main Navigation ------*/
+		#navigation {
+			width: 100%;
+		 	position: relative;
+		 	padding-top: 0;
+		}
+		.navbar {
+			.btn-navbar {
+				display: none;				
+				&:first-child {
+					display: block;
+				}
+				&:hover {
+					background: transparent;
+				}
+			}			
+		}		
+		.nav-collapse {
+			.dropdown-menu {
+				a {
+					border-radius: 0;
+				}
+			} 
+		}
+		.navbar-static-top {
+			margin: 0;
+		}
+		.dockbar {
+			z-index: 2500;
+			.navbar-inner {
+				padding: 0;
+			}
+		}
+		.dockbar .navbar-inner, 
+		.dockbar-split .dockbar .navbar-inner {
+			background: transparent;
+			box-shadow: none;
+			border: none;			
+		}
+		.dockbar-split .dockbar .navbar-inner .btn-navbar, 
+		.dockbar .navbar-inner .btn-navbar {
+			padding: 0;
+			font-size: 17px;
+			margin: 0;
+		}			
+		.portlet-dockbar {
+			background: transparent;
+			width: inherit;
+			display: inherit;
+		}
+		#search {
+			input[type="text"] {
+				width: 100%;
+			}
+		}	
+		.nav-collapse .nav > li > a, 
+		.nav-collapse .dropdown-menu a {
+			font-weight: normal;
+		}		
+		/*-------- Dashboard ----------*/
+		.nav-dash {
+			margin: 0;
+			li {
+				a {
+					border-radius: 55px;
+				    height: 55px;
+				    line-height: 50px;
+				    width: 55px;
+				    padding: 0;
+				}
+			} 
+		} 
+
+		.tabbable-content #contactForm .control-group select, 
+		.tabbable-content #contactForm .control-group textarea,
+		.tabbable-content #reportManagerForm .control-group select, 
+		.tabbable-content #reportManagerForm .control-group textarea,		
+		.tabbable-content #reportManagerForm .control-group input[type="text"], 
+		.tabbable-content #reportManagerForm .control-group input[type="text"]
+		{
+			width: 100%;
+		}
+
+		.tabbable-content #searchReportForm .example {
+		    display: block;
+		    padding: 15px;
+		}
+	}	
+}
+ 
+
+@media (max-width: 767px) {
+	.aui {
+		#content {
+			width: 100%;
+			float: none;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			padding: 0;
+		}
+		#wrapper{
+			padding: 0;
+		}
+		#banner {
+			#heading {
+				bottom: inherit;
+				position: relative;
+				.dropdown-user {
+					.user-menu {
+						right: 40px;
+					}
+				}
+			}
+		}
+		#breadcrumbs {
+			margin: 0;
+		}
+		.dash-blocks {
+			padding: 0 5px;
+		}
+		/*---------- Main Navigation ------*/
+		#navigation {
+			width: 100%;
+		 	position: relative;
+		 	padding-top: 0;
+		}
+		.navbar {
+			.btn-navbar {
+				display: none;				
+				&:first-child {
+					display: block;
+				}
+				&:hover {
+					background: transparent;
+				}
+			}
+		}
+		.nav-collapse {
+			.dropdown-menu {
+				a {
+					border-radius: 0;
+				}
+			} 
+		}
+		.navbar-static-top {
+			margin: 0;
+		}
+		.dockbar {
+			z-index: 2500;
+			.navbar-inner {
+				padding: 0;
+			}
+		}		
+		.portlet-dockbar {
+			background: transparent;
+			width: inherit;
+			display: inherit;
+		}
+		.dockbar .navbar-inner, 
+		.dockbar-split .dockbar .navbar-inner {
+			background: transparent;
+			box-shadow: none;
+			border: none;			
+		}
+		.dockbar-split .dockbar .navbar-inner .btn-navbar, 
+		.dockbar .navbar-inner .btn-navbar {
+			padding: 0;
+			font-size: 17px;
+			margin: 0;
+		}
+		#search {
+			input[type="text"] {
+				width: 100%;
+			}
+		}		
+		.nav-collapse .nav > li > a, 
+		.nav-collapse .dropdown-menu a {
+			font-weight: normal;
+		}	
+		/*-------- Dashboard -----------*/
+		.nav-dash {
+			margin: 0;
+			li {
+				a {
+					border-radius: 55px;
+				    height: 55px;
+				    line-height: 50px;
+				    width: 55px;
+				    padding: 0;
+				}
+			} 
+		} 
+
+
+		.tabbable-content #searchReportForm{
+			padding: 15px 0;
+		}
+
+		.tabbable-content #searchReportForm .buttonBox{
+			position: relative;
+		}
+		.tabbable-content #searchReportForm .buttonBox button{
+			margin: 0;
+		}
+
+		.tabbable-content #searchReportForm .example {
+		    display: block;
+		    padding: 15px;
+		}
+
+		.tabbable-content #searchReportForm .control-group {
+		    display: block;
+		    padding: 10px;
+		}
+	}	
+
+}
+ 
+
+@media (max-width: 480px) {
+	.aui {
+		#content {
+			width: 100%;
+			float: none;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			padding: 0;
+		}
+		#wrapper{
+			padding: 0;
+		}
+		#banner {
+			#heading {
+				bottom: inherit;
+				position: relative;
+				.dropdown-user {
+					.user-menu {
+						right: 40px;
+					}
+				}
+			}
+		}
+		#breadcrumbs {
+			margin: 0;
+		}
+		.dash-blocks {
+			padding: 0 5px;
+		}
+		/*---------- Main Navigation ------*/
+		#navigation {
+			width: 100%;
+		 	position: relative;
+		 	padding-top: 0;
+		}
+		.navbar {
+			.btn-navbar {
+				display: none;				
+				&:first-child {
+					display: block;
+				}
+				&:hover {
+					background: transparent;
+				}
+			}
+		}
+		.nav-collapse {
+			.dropdown-menu {
+				a {
+					border-radius: 0;
+				}
+			} 
+		}
+		.navbar-static-top {
+			margin: 0;
+		}
+		.dockbar {
+			z-index: 2500;
+			.navbar-inner {
+				padding: 0;
+			}
+		}	
+		.portlet-dockbar {
+			background: transparent;
+			width: inherit;
+			display: inherit;
+		}
+		.dockbar .navbar-inner, 
+		.dockbar-split .dockbar .navbar-inner {
+			background: transparent;
+			box-shadow: none;
+			border: none;			
+		}
+		.dockbar-split .dockbar .navbar-inner .btn-navbar, 
+		.dockbar .navbar-inner .btn-navbar {
+			padding: 0;
+			font-size: 17px;
+			margin: 0;
+		}	
+		#search {
+			input[type="text"] {
+				width: 100%;
+			}
+		}			
+		.nav-collapse .nav > li > a, 
+		.nav-collapse .dropdown-menu a {
+			font-weight: normal;
+		}	
+		/*-------- Dashboard -----------*/
+		.nav-dash {
+			margin: 0;
+			li {
+				a {
+					border-radius: 55px;
+				    height: 55px;
+				    line-height: 50px;
+				    width: 55px;
+				    padding: 0;
+				}
+			} 
+		} 
+
+		.find-company{
+			width: 96%;
+			padding: 1%;
+		}
+	}
+}
+
+

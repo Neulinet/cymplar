@@ -1,0 +1,242 @@
+@import "compass";
+@import "mixins";
+
+.aui{
+	.tabbable-content{
+
+		/*-- Leads Tab (#reportsearch_WAR_cordilleraportle) --*/
+		#searchReportForm {			
+			padding: 65px 0 0;
+			position: relative;			
+			.control-group {
+				display: inline-block;
+			    margin: 0;
+			    padding: 10px;
+			    vertical-align: top;
+				@include box-sizing(border-box);
+				&.group-0 {
+					position: absolute;
+					left: 0;
+					width: 100%;
+				}
+				&.group-1 {
+					display: inline-block;
+					float: left;
+					margin-left: 250px;	
+				}
+				&.group-2 {
+					display: inline-block;
+					float: left;					
+				}
+				&.group-3 {
+					clear: both;
+				}
+
+				input[type='text'].field{
+					width: 150px;
+				}
+			}
+			.group-3 {
+				> label {
+					display: inline-block;
+					position: absolute;
+					left: 15px;
+				}
+				> select {
+					float: left;
+					margin-top:30px;
+				}
+			}
+			.form-group {
+				display: inline-block;
+			    padding: 10px;
+			    vertical-align: top;
+				> label {
+					display: inline-block;
+					float: left;
+					margin-right: 15px;
+				}				
+				.checkbox-group {
+					display: inline-block;
+				}
+			}
+			.example {
+			    display: inline-block;
+			    padding: 10px 0;
+			}
+			#slider {
+				display: inline-block;
+				margin: 0 50px;
+				vertical-align: top;
+			}
+			.group-4 {
+				> label {
+					float: left;
+					display: inline-block;
+					width: 250px;
+				}	
+				> input {
+					float: left;
+					clear: both;
+				}										
+				.group-5 {
+					padding: 0;
+					display: inline-block;
+					border: none;
+					> label {
+						display: block;
+					}					
+				}
+							
+			} 
+			.buttonBox {
+				position: absolute;
+				top: 0;
+				right: 0;
+				text-align: right;
+				display: block;
+				width: 100%;
+				padding: 0 15px 15px;
+				border-bottom: 1px solid #ddd;
+				@include box-sizing(border-box);
+				button {
+					margin-left: 15px;
+				}
+				p {
+					font-weight: normal;
+					float: left;
+					display: inline-block;
+					font-size: 18px;
+					margin: 0;					
+					line-height: 30px;
+					i {
+						margin-right: 10px;
+					}
+				}
+			}				
+		}/*-- !Leads Tab --*/
+		/*-- Add Contact Tab (#contactmanager_WAR_cordilleraportlet) --*/
+		form h4 {
+			border-bottom: 1px solid #ddd;
+			margin: 10px 0;
+    		padding: 20px;
+			font-size: 14px;
+			font-weight: normal;
+			@include box-sizing(border-box);
+		}
+		.alert.alert-error {
+		    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+		    border: medium none;
+		    font-size: 12px;
+		    margin: 0 10px;
+		    padding: 0;
+		    text-align: left;
+		}
+		.control-group .help-inline{
+			font-size: 12px;
+   			padding: 0;
+		}
+		#contactForm, #reportManagerForm {
+			label{
+			    margin: 15px;
+			}
+			.checkbox {
+				display: block;
+			    float: none;
+			    margin: 10px 40px;
+			    width: inherit;
+		    	text-align: right;
+			    input{
+			    	float: none;
+				    margin: 5px;
+				    vertical-align: middle;
+			    }
+			}
+
+			.control-group {
+				text-align: left;
+				margin: 0;
+				padding: 5px 15px;
+				clear: both;
+				@include box-sizing(border-box);
+				input[type="text"] {
+					@include box-sizing(border-box);
+				    background-image: none;	   
+				    color: #555;
+				    display: block;
+				    font-size: 14px;
+				    height: 35px;				    
+				    padding: 6px 12px;
+				    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+				    width: 350px;				    
+				}
+				select, textarea {
+					width: 350px;
+				}	
+
+				label {
+					margin: 0;
+				    padding-top: 7px;
+				    text-align: left;
+				    float: left;
+				    width: 18%;
+				    min-width: 100px;
+				    margin-right: 20px;
+				}		
+							
+			}
+
+			.example{
+				text-align: left;
+				margin: 0;
+				padding: 5px 15px;
+				@include box-sizing(border-box);
+				@include clearfix;
+
+				label {
+					margin: 0;
+				    padding-top: 7px;
+				    text-align: left;
+				    float: left;
+				    width: 18%;
+				    min-width: 100px;
+				    margin-right: 20px;
+				}	
+				.horiz_slider{
+					display: inline-block;
+   					min-height: 40px;
+				}	
+			}
+			.form-group, .buttonBox {
+				border-top: 1px solid #ddd;
+			    padding: 15px;
+			    text-align: right;
+				@include box-sizing(border-box);
+				button {
+					margin-right: 15px;
+				}
+			}
+		}
+		/*-- Add Contact Tab --*/	
+
+		.page-header-top{
+			display: none;
+		}
+
+
+		.yui3-aclist{
+			box-shadow: none;
+		    display: block;
+		    width: 350px;
+		    .yui3-aclist-content {
+			    background: none repeat scroll 0 0 #fff;
+			    border: 1px solid #ddd;
+			    box-shadow: none;
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}

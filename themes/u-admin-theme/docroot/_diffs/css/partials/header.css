@@ -1,0 +1,74 @@
+@import "compass";
+@import "mixins";
+@import "aui_variables";
+
+
+/*----------------------------
+		Header Styles           
+-----------------------------*/
+
+#banner {
+	background: $headerBackground;
+	position: relative;
+	z-index: 100;
+	#heading {						
+		.site-title {
+			display: inline-block;				
+			margin: 0;
+			line-height: inherit;							
+			.logo {
+				padding: 8px 15px;
+			} 
+			img {
+				width: 91px;
+			}
+		}		
+		.dropdown-user {								
+			.caret {
+				border-top-color: #999999;
+				vertical-align: inherit;
+				margin-left: 10px;
+			}
+			> a {
+				display: inline-block;
+				line-height: 41px;
+				border-right: solid 1px #3b3b3b;
+				box-shadow: -1px 0 0 #5b5b5b inset;
+				padding-right: 10px;
+			}
+			.user-menu {					
+				position: absolute;
+				box-shadow: 1px 1px 2px #888;
+				z-index: 2000;
+				top: 43px;
+				right: 0;
+				background: $white;
+				margin: 0;					
+				li {
+					list-style: none;								
+					&:first-child {
+						border-bottom: solid 1px $darkBorder;							
+					}
+					&:last-child {
+						border-top: solid 1px $darkBorder;							
+					}
+					a {
+						color: #333;
+						display: block;
+						line-height: 25px;
+						padding: 0 15px;
+						margin: 5px 0;
+						&:hover {
+							background: $orange;
+							color: $white;
+							text-decoration: none;						}
+
+					}
+				}
+				i {
+					margin: 0 5px 0 0;
+				}
+			}
+		}
+	}
+}

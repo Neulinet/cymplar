@@ -1,0 +1,42 @@
+@import "compass";
+@import "mixins";
+@import "aui_variables";
+
+.aui {
+	.nav-dash {
+		margin: 0 -20px 20px;
+		padding: 15px 0;
+		background: $greyBg;
+		border-top: solid 1px $lighterGreyBorder;
+		border-bottom: solid 1px $lighterGreyBorder;
+		text-align: center;
+		li {
+			display: inline-block;
+			a {
+				background-color: $lightBorder;
+			    border: 1px solid $darkBorder;
+			    border-radius: 45px;
+			    color: #777;
+			    display: block;			    
+			    font-size: 32px;
+			    height: 45px;
+			    line-height: 32px;
+			    margin: 0 0 5px;
+			    padding: 27px 20px 13px;
+			    position: relative;
+			    text-align: center;
+			    width: 45px;
+			    float: left;
+			    span {
+			    	height: 20px;
+				    line-height: 20px;
+				    margin: 0 0 0 3px;
+				    padding: 0 7px;
+				    position: absolute;
+				    right: 0;
+				    top: 0;
+			    }
+			}
+		}
+	}
+}

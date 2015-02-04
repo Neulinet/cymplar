@@ -1,0 +1,196 @@
+@import "compass";
+@import "mixins";
+@import "aui_variables";
+
+
+/*--------------------------------
+		Dashboard
+---------------------------------*/
+.aui {
+	.dash-blocks {		
+		@include box-sizing(border-box);
+	}
+	.dash-tile-header {
+		position: relative;
+		background: $lighterGreyBorder;
+		opacity: 0.75;
+		line-height: 45px;
+		padding-left: 10px;
+		border-bottom: solid 1px $greyBg;
+		a {
+			border: solid 1px $darkBorder;
+			background: transparent;
+			border-radius: 0;
+			box-shadow: none;
+			color: inherit;
+			line-height: 17px;
+			padding: 10px 15px;
+		}
+		.dash-tile-options {
+		    float: right;
+		    height: 38px;
+		    line-height: 45px;
+		    margin-right: 10px;
+		}		
+	}
+	.dash-tile {
+		min-height: 190px;	
+		margin-bottom: 20px;					
+		&.dash-tile-ocean {
+			background: $blue;			
+		}
+		&.dash-tile-flower {
+			background: $violet;			
+		}
+		&.dash-tile-oil {
+			background: $yellow;			
+		}
+		&.dash-tile-balloon {
+			background: $orange;		
+		}
+		&.dash-tile-leaf {
+			background: $green;			
+		}
+		&.dash-tile-fruit {
+			background: $orangeLight;		
+		}
+		&.dash-tile-dark {
+			background: $darkGrey;			
+		}
+		&.dash-tile-doll {
+			background: $pink;			
+		}
+		.dash-tile-icon {
+		    font-size: 48px;
+		    text-align: left;
+		    color: $white;
+		    display: inline-block;
+		    margin: 40px 0 0 20px;
+		}
+		.dash-tile-text {
+			display: inline-block;
+			float: right;
+			color: $white;
+			font-size: 48px;
+			line-height: 48px;
+			margin: 40px 20px 0 0;
+		}
+	}	
+	#myContactDataTable {
+		border-top: 1px solid #ddd; 
+	}
+	
+	/* Calendar Plugin */
+	#mycalendar {
+		border: solid 1px #ddd;
+		[class*="calendarnav"] {
+			font-size: 25px;
+			&:hover, &:active, &:focus {
+				color: #888;
+				text-decoration: none;
+			}
+		}
+		[class*="calendarnav-prevmonth"] {			
+			float: left;			
+		}
+		[class*="calendarnav-nextmonth"] {			
+			float: right;
+		}
+		[class*="calendar-header-label"] {
+			display: inline-block;
+			width: 90%;
+		}
+		[class*="calendar-content"] {  
+			border: solid 1px #ddd;
+		}
+		[class*="calendar-day"] {
+			font-weight: normal;
+			&:hover {
+				background: #5bc0de;
+			}
+		}
+		[class*="calendar-weekday"] {
+			font-weight: normal;
+		}
+	}
+
+	/*------------------------------- 
+		UI Tabs for Dashboard page 
+	---------------------------------*/
+
+	#dashboard-tabs {			
+		.page-header {
+			display: none;
+			i {
+				font-size: 12px;
+				vertical-align: middle;
+			}
+		}
+		.table-table {
+			width: 100%;
+		}
+		li.tab a{
+			background-color: #eeeeee;
+			border-color: #eeeeee #eeeeee #dddddd;
+		}
+		li.tab a:hover,
+		li.tab.active a{
+			background-color: #fff;
+			border-color: #eeeeee #eeeeee transparent;
+		}
+
+		.nav-tabs{
+			margin: 0;
+		}
+			
+	}/*-- !UI Tabs for Dashboard page --*/
+
+	#dashboard-tabs-add{
+		li.tab a{
+			background-color: #eeeeee;
+			border-color: #eeeeee #eeeeee #dddddd;
+		}
+		li.tab a:hover,
+		li.tab.active a{
+			background-color: #fff;
+			border-color: #eeeeee #eeeeee transparent;
+		}
+		.nav-tabs{
+			margin: 0;
+		}
+	}
+
+	/*---- Pagination ---*/
+	.aui-pagination {
+		background-color: #f9f9f9;
+	    border: 1px solid #ddd;
+	    padding: 8px 10px 3px;
+	    text-align: right;
+	    width: auto;
+		.pagination {
+			margin: 0;			
+			ul {
+				box-shadow: none;
+				border-radius: 0;
+				li {
+					&:first-child a, &:last-child a {
+						border-radius: 0;
+					}
+					&:first-child span, &:last-child span {
+						border-radius: 0;
+					}					
+					a {
+						color: #e74431;
+						padding: 6px 12px;
+					}
+					span {
+						padding: 6px 12px;
+					}
+				}
+			}
+		}
+	}/*-- !Pagination --*/
+
+	
+}
+

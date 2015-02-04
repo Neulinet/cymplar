@@ -1,0 +1,3 @@
+#set ($css_class = "${css_class} dockbar-split")
+#set ($custom = $htmlUtil.escape($portalUtil.getStaticResourceURL($request,"$javascript_folder/custom.js")))
+

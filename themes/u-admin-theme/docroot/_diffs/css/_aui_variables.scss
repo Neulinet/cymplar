@@ -1,0 +1,100 @@
+//
+// Custom Variables
+// --------------------------------------------------
+
+$headerBackground: #4b4b4b;
+$arrowDefaultColor: #333333;
+$navItemActiveColor: #343539;
+$navItemColor: #a09f9b;
+$itemHoverColor: #777;
+$navItemBg: #e9e9e9;
+$navItemHoverBg: #f6f6f6;
+$menuBackgroundColor: #dddddd;
+$darkBorder: #cccccc;
+$redText: #db4a39;
+$lightBorder: #dddddd;
+$greyBg: #f9f9f9;
+$lighterGreyBorder: #eee;
+
+// color block
+
+$blue: #3991db;
+$lightBlue: #c0d7e9;
+
+$violet: #9139db;
+$lightViolet: #d6bfe9;
+
+$yellow: #d9db38;
+$lightYellow: #e8e9c1;
+
+$orange: #e74431;
+$lightOrange: #e8ccc0;
+
+$green: #c2db39;
+$lightGreen: #e3eac1;
+
+$orangeLight: #da9838;
+$orangeLighter: #e8d8bf;
+
+$darkGrey: #555555;
+$lightGrey: #c7c7c7;
+
+$pink: #da39bb;
+$lightPink: #e9c0e2;
+
+$gray: #555;
+$white: #FFF;
+
+
+$sansFontFamily: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$linkColor: #0AF;
+$linkColorHover: darken($linkColor, 15%);
+
+$baseBorderRadius: 2px;
+$borderRadiusLarge: 3px;
+$borderRadiusSmall: 2px;
+
+$btnBackground: #F6F6F6;
+$btnBackgroundHighlight: #EAEAEA;
+$btnBorder: #CFCFCF;
+$btnDangerBackground: #F53924;
+$btnDangerBackgroundHighlight: #ED2C17;
+$btnInfoBackground: #00CFFF;
+$btnInfoBackgroundHighlight: darken($btnInfoBackground, 4%);
+$btnPrimaryBackground: #54AAFF;
+$btnPrimaryBackgroundHighlight: #4A96E8;
+$btnSuccessBackground: #0ECD27;
+$btnSuccessBackgroundHighlight: #0ABA1D;
+$btnWarningBackground: #FFA658;
+$btnWarningBackgroundHighlight: #F49645;
+
+$dropdownLinkBackgroundActive: lighten($linkColor, 5%);
+$dropdownLinkBackgroundHover: darken(#3ECAF4, 10%);
+$dropdownLinkColorActive: $white;
+
+$navbarBackground: #F3F3F3;
+$navbarBackgroundHighlight: #F9F9F9;
+$navbarBorder: #DDDDDD;
+$navbarLinkBackgroundActive: lighten($navbarBackground, 25%);
+$navbarLinkColor: $gray;
+$navbarLinkColorHover: $linkColorHover;
+$navbarText: $navbarLinkColor;
+
+$errorBackground: #FEE5E2;
+$errorBorder: #FCACA5;
+$errorText: #db4a39;
+$infoBackground: #CEF1FC;
+$infoBorder: darken($infoBackground, 10%);
+$infoText: #12718F;
+$successBackground: #F1FBD1;
+$successBorder: #BCE830;
+$successText: #488F06;
+$warningBackground: #FFFBDC;
+$warningBorder: #F1D875;
+$warningText: #BF7900;
+
+$dockbarGradientEnd: #1273C7;
+$dockbarGradientStart: #118ADE;
+$dockbarOpenGradientEnd: #0993DD;
+$dockbarOpenGradientStart: #0EA6F9;

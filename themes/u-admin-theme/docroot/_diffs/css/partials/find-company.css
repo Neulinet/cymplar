@@ -1,0 +1,11 @@
+.aui .find-company{
+    background: url(../../images/u_admin/medium_logo.png) no-repeat center 10px #f9f9f9;
+    margin: 0 auto;
+    width: 430px;
+    padding: 92px 10px 10px;
+    .custom-control-group {
+    	.control-group {
+    		margin-bottom: 0;
+    	}
+    }
+}

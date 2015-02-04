@@ -1,0 +1,206 @@
+@import "compass";
+@import "mixins";
+@import "aui_variables";
+
+
+.aui {
+	/* ----------------------------------
+			Main navigation 
+	------------------------------------ */
+
+	#navigation {	
+		width: 200px;
+		position: absolute;
+		top:0;
+		bottom: 0;
+		padding-top: 42px;
+		z-index: 50;		
+		background: $menuBackgroundColor;				
+		.nav {
+			float: none;
+			margin: 0;
+			li {
+				display: block;
+				float: none;
+				border-top: solid 3px $menuBackgroundColor;
+				background: $navItemBg;	
+				&:first-child {
+					border-top: none;
+				}			
+				&.dropdown {
+					> .dropdown-toggle {
+						.caret {
+							border-bottom-color: #FFF;
+							border-top-color: #FFF;
+						}
+					}
+				}				
+				&.active > a {
+					@include box-shadow(none);
+					border-left: solid 4px $orange;
+				}
+				&.active > .dropdown-toggle {
+					background: inherit;
+					border-left: solid 4px transparent;
+				}
+				.icon {
+					margin-right: 10px;
+				}
+			}
+			> li > a {
+				padding: 5px 0 5px 10px;
+				color: $navItemColor;	
+				border-left: solid 4px transparent;	
+				display: block;		
+				&:hover {
+					@include box-shadow(none);
+					background: $navItemHoverBg;
+					color: $itemHoverColor;
+					text-decoration: none;
+				}				
+			}
+			.counter {
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				border-radius: 20px;
+				height: 20px;
+				width: 20px;
+				text-align: center;
+				line-height: 20px;
+				background: $white;
+				color: $navItemColor;
+				font-size: 12px;
+			}
+			.dropdown-menu {	
+				position: relative;
+				float: none;			
+				border-width: 0;
+				margin: 0;
+				padding:0;
+				display: block;
+				@include border-radius(0);
+				@include box-shadow(none);				
+				&:after, &:before {
+					border-width: 0;					
+				}
+				li {
+					border: none;
+				}
+				a {
+					color: $navItemColor;
+					line-height: 30px;					
+					&:hover {
+						color: $itemHoverColor;
+						background: $navItemHoverBg;
+						text-decoration: none;
+					}
+				}
+			}
+		}		
+		.navbar-inner {			
+			background: $menuBackgroundColor;
+			@include box-shadow(none);		
+			padding: 0;								
+		}
+	}
+	.navbar-inner {
+		.container {
+			.icon-reorder {
+				color: #999999;
+				line-height: 41px;
+				padding: 0 10px;
+				margin: 0;
+			}
+		}
+	}
+	
+
+	/* ---------- Breadcrumbs ---------- */
+
+	.breadcrumb {
+		background-color: #FAFAFA;
+		padding: 0;
+
+	}
+
+	#breadcrumbs {
+		background: $navItemHoverBg;
+		border-bottom: solid 1px $lightBorder;	
+		height: 30px;
+		padding: 0;	
+		margin: -20px -20px 20px;
+		li {
+			padding-left: 5px;
+			a {				
+				font-size: 12px;
+				color: $itemHoverColor;
+				background: url("../../images/u_admin/nav_info_seperator.png") no-repeat scroll 100% 0 transparent;		
+				display: inline-block;
+				height: 30px;
+			    line-height: 30px;
+			    padding: 0 20px 0 10px;
+			    text-align: center;
+				&:hover {
+					text-decoration: none;				
+				}			
+			}
+			&.active a {
+				color: $orange;
+				background: none;	
+			}
+		}		
+		.home-link {
+			background: url("../../images/u_admin/nav_info_seperator.png") no-repeat scroll 100% 0 transparent;
+		    display: inline-block;
+		    float: left;
+		    height: 35px;
+		    line-height: 35px;
+		    padding: 0 20px 0 15px;
+		    text-align: center;
+		    color: $navItemActiveColor;
+		}
+		.breadcrumb {
+			margin-bottom: 0;
+		}
+		.divider {
+			display: none;
+		}
+	}
+
+	/*---------------------
+			Search
+	----------------------*/
+
+	#search {
+		position: relative;
+		input[type="text"]{
+			box-sizing: border-box;
+			width: 200px;
+			height: 35px;
+			background: $navItemBg;
+			font-weight: normal;
+			font-size: 12px;
+			font-style: italic;		
+			margin-bottom: 7px;
+			font-family: 'robotomedium';
+			margin-bottom: 15px;
+			&:focus {
+				border-color: transparent;
+				outline: none;
+				box-shadow: none;
+			}
+		}
+		input[type="image"] {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+		select {
+			display: none;
+		}
+	}
+}
+	
+

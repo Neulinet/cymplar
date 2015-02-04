@@ -1,0 +1,45 @@
+@import "compass";
+@import "mixins";
+
+/*--- Accordion plugin (for contactmanager portlet) ---*/
+.aui #content{
+	.buton-wrap {
+		padding: 15px;
+		box-sizing: border-box;		
+	}
+	.dropdown{
+		border: solid 1px #ddd;			
+		background: #f9f9f9;
+		h4 {
+			background: #f5f5f5;
+			border-bottom: medium none transparent;
+			margin: 0;
+			padding: 10px;
+			font-size: 14px;
+			font-weight: normal;
+			@include box-sizing(border-box);
+			@include clearfix;
+			cursor: pointer;
+			text-align: left;
+			small{
+				float: right;
+				font-size: 22px;
+			}
+			small:after{
+				content:"\f0ab";
+				font-family:'FontAwesome';
+			}
+
+			&.active small:after{
+				content:"\f0aa";
+				font-family:'FontAwesome';
+			}
+
+		}
+
+		.accordionWrap{
+		    border-top: 1px solid #ddd;
+		    padding: 10px 0;
+		}
+	}
+}

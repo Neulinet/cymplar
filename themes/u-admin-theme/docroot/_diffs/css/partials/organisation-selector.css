@@ -1,0 +1,48 @@
+.aui .portlet-boundary_addOrganization_WAR_cordilleraportlet_ {
+	.join-company, .join-company-form {
+		background: none repeat scroll 0px 0px #F9F9F9;
+		margin: 0px auto;
+		padding: 10px;
+	}
+	.join-company {
+		width: 430px;
+	}
+	.portlet-borderless-container {background-color: transparent;}
+	.journal-content-article {text-align: center;}
+	&.portlet-borderless {
+		.page-header {
+			padding: 82px 0 0;
+			margin: 0 0 20px;
+			border-width: 0;
+			background-color: transparent;
+			background: url(../../images/u_admin/medium_logo.png) no-repeat center top;
+			font-size: 30px;
+			line-height: 55px;
+			small {
+				display: block;
+			}
+			.fa {
+				display: none;
+			}
+		}
+	}
+	#joinButton {
+		display: block;
+		width: 219px;
+		margin: 0 auto;
+		font-weight: bold;
+		background-color: #DDD;
+		border-color: #CCC;
+		color: #333;
+
+	}
+	.well {
+		border-width: 0;
+		background-color: transparent;
+		padding: 24px 0 0;
+		margin: 0;
+		a {
+			text-decoration: underline;
+		}
+	}
+}

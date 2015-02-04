@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+#parse ($init)
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+	<head>
+		<title>$the_title - $company_name</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">	
+		<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+		#js($custom)  
+
+		$theme.include($top_head_include)
+	</head>
+	<body class="$css_class">
+		<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+		$theme.include($body_top_include)
+		
+		#dockbar()
+		
+		<div class="container-fluid" id="wrapper">	
+			#if ($is_signed_in)
+			<div id="main" class="clearfix">
+				<header id="banner" role="banner">		
+					<div id="heading">
+						<h1 class="site-title">
+							<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+								<img alt="$logo_description" height="$site_logo_height" src="$images_folder/u_admin/logo_cymplar.png" width="$site_logo_width" />				
+							</a>
+						</h1>
+						<div class="pull-right dropdown-user">
+			                <a id="toggle" class="toggler-header-collapsed" href="#"><img alt="avatar" src="$images_folder/u_admin/avatar.png"><b class="caret"></b></a>
+			                <ul class="user-menu toggler-content-collapsed">                    
+			                    <li>
+			                        <a class="loading-on" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i> Refresh</a>
+			                    </li>                    
+			                    <li>
+			                   
+			                    #if ($is_signed_in)
+									<div class="link-to-my-account" id="userInfo">
+									 <a class="user-fullname use-dialog" data-controlpanelcategory="my" title="Manage My Account"href="$my_account_url"><i class="fa fa-user"></i>User Profile</a>
+									</div>
+								#end                        
+			                        
+			                    </li>
+			                    <li>
+			                        <a href="#"><i class="fa fa-wrench"></i> App Settings</a>
+			                    </li>                    
+			                    <li>
+					                #if (!$is_signed_in)						            
+							            <a href="$sign_in_url" id="sign-in" rel="nofollow"><i class="fa fa-lock"></i>Log in</a>
+							        #else						           
+							            <a href="$sign_out_url" id="sign-out" rel="nofollow"><i class="fa fa-lock"></i>Log out</a>
+							        #end
+			                        	
+			                    </li>
+			                </ul>
+			            </div>  
+						<span id="hideDocbar"></span>			
+					</div>
+				</header>
+				#if ($has_navigation)
+					#parse ("$full_templates_path/navigation.vm")
+				#end		
+				<div id="content">				
+					<nav id="breadcrumbs"><a href="$site_default_url"><i class="fa fa-home home-link"></i></a>#breadcrumbs()</nav>			
+						##parse ("$full_templates_path/temp.vm")	
+
+					#if ($selectable)
+						$theme.include($content_include)
+					#else
+						$portletDisplay.recycle()
+						$portletDisplay.setTitle($the_title)
+						$theme.wrapPortlet("portlet.vm", $content_include)
+					#end	
+					
+				</div>	
+			</div>
+			<a id="to-top" href="#"><i class="fa fa-chevron-up"></i></a>
+			#else
+				<div class="login">	
+					<div id="login-container">
+						<div id="login-logo">
+						    <a href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+								<img alt="$logo_description" src="$images_folder/u_admin/medium_logo.png"  />				
+							</a>
+						</div>
+
+						$velocityPortletPreferences.setValue("portletSetupShowBorders", "false")
+	                    $theme.runtime("58", "", $velocityPortletPreferences.toString())
+	                    $velocityPortletPreferences.reset()
+	                    
+
+		                #if ($selectable)
+							$theme.include($content_include)
+						#else
+							$portletDisplay.recycle()
+							$portletDisplay.setTitle($the_title)
+							$theme.wrapPortlet("portlet.vm", $content_include)
+						#end
+					
+                    </div>
+				</div>
+			#end
+		</div>
+		#if ($is_signed_in)	
+		<footer id="footer" role="contentinfo">	
+			<p>2013-14 &copy; <span>uAdmin 2.0</span> - Crafted with<span><i class="fa fa-heart text-danger"></i>pixelcave</span></p> 
+		</footer>
+		#end
+		#js("$javascript_folder/bootstrap-tooltip.js")
+		$theme.include($body_bottom_include)
+		$theme.include($bottom_include)
+	</body>
+</html>

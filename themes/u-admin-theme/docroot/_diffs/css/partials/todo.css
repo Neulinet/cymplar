@@ -1,0 +1,11 @@
+@import "compass";
+@import "mixins";
+
+.aui #dashboard-table{
+	#top-buttons{
+		padding: 10px 15px 15px;
+		text-align: right;
+		margin: 10px 0;
+		border-bottom: 1px solid #ddd;
+	}
+}

@@ -1,0 +1,65 @@
+<nav class="$nav_css_class navbar site-navigation" id="navigation" role="navigation">
+<div id="search">$theme.search()</div>
+	<div class="navbar-inner">
+		<div class="collapse nav-collapse">
+			<ul aria-label="#language ("site-pages")" class="nav nav-collapse main-nav" role="menubar">
+				#foreach ($nav_item in $nav_items)
+						#set ($nav_item_attr_selected="")
+						#set ($nav_item_attr_has_popup="")
+						#set ($nav_item_caret="")
+						#set ($nav_item_css_class="lfr-nav-item")
+						#set ($nav_item_link_css_class="")
+
+					#if ($nav_item.isSelected())
+						#set ($nav_item_attr_selected="aria-selected='true'")
+						#set ($nav_item_css_class="$nav_item_css_class selected active")
+					#end
+
+					#if ($nav_item.hasChildren())
+						#set ($nav_item_attr_has_popup="aria-haspopup='true'")
+						#set ($nav_item_caret='<b class="icon-caret-down"></b>')
+						#set ($nav_item_css_class="$nav_item_css_class dropdown")
+						#set ($nav_item_link_css_class="dropdown-toggle")
+					#end
+
+					<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+						<a aria-labelledby="layout_$nav_item.getLayoutId()" $nav_item_attr_has_popup class="$nav_item_link_css_class" href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
+							<span> 
+								#if($nav_item.getLayout().getExpandoBridge().hasAttribute("ICON_CLASS") && $nav_item.getLayout().getExpandoBridge().getAttribute("ICON_CLASS") != "")
+									<span class="icon"><i class="$nav_item.getLayout().getExpandoBridge().getAttribute('ICON_CLASS')"></i></span>
+								#end
+								$nav_item.icon() $nav_item.getName()
+							</span>
+						</a>
+						#if ($nav_item.hasChildren())
+						<span  class="counter">$nav_item.getChildren().size()</span>				
+							<ul class="dropdown-menu child-menu hide" role="menu">
+								#foreach ($nav_child in $nav_item.getChildren())
+									#set ($nav_child_attr_selected="")
+									#set ($nav_child_css_class="lfr-nav-item")
+
+									#if ($nav_child.isSelected())
+										#set ($nav_child_attr_selected="aria-selected='true'")
+										#set ($nav_child_css_class="selected")
+									#end
+
+									<li class="$nav_child_css_class" id="layout_$nav_child.getLayoutId()" $nav_child_attr_selected role="presentation">
+										<a aria-labelledby="layout_$nav_child.getLayoutId()" href="$nav_child.getURL()" $nav_child.getTarget() role="menuitem">
+										#if($nav_child.getLayout().getExpandoBridge().hasAttribute("ICON_CLASS") && $nav_child.getLayout().getExpandoBridge().getAttribute("ICON_CLASS") != "")
+											<span class="icon"><i class="$nav_child.getLayout().getExpandoBridge().getAttribute('ICON_CLASS')"></i></span>
+										#end
+										$nav_child.getName()</a>									
+									</li>
+								#end
+							</ul>
+						#end
+					</li>
+				#end
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+	Liferay.Data.NAV_LIST_SELECTOR = '.navbar-inner .nav-collapse > ul';
+</script>

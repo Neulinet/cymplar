@@ -545,7 +545,15 @@
 
 
 
-
+/* Styles to reduce size of inputs in dashboard form */
+ .tabbable-content #contactForm .control-group select, 
+ .tabbable-content #contactForm .control-group textarea, 
+ .tabbable-content #reportManagerForm .control-group select,  
+ .tabbable-content #reportManagerForm .control-group textarea, 
+ .tabbable-content #contactForm .control-group input[type="text"], 
+ .tabbable-content #reportManagerForm .control-group input[type="text"] {
+    width: 60% !important;
+}
 
 
 

@@ -6,7 +6,7 @@
 
 
 <%
-User selUser = PortalUtil.getSelectedUser(request);
+User selUser = themeDisplay.getUser();
 
 Contact selContact = null;
 
@@ -93,7 +93,7 @@ else {
 		<liferay-ui:message key="the-passwords-you-entered-do-not-match-each-other-please-re-enter-your-password" />
 	</c:if>
 </liferay-ui:error>
-	
+	<aui:model-context bean="<%= selUser %>" model="<%= User.class %>" />
 	
 	<aui:input autocomplete="off" label="current-password" name="password0" size="30" type="password" />
 
@@ -104,6 +104,9 @@ else {
 			'#<portlet:namespace />password1'
 		</aui:validator>
 	</aui:input>
+	
+	
+	<aui:input name="jobTitle" />
 	
 	<aui:button-row>
 		<aui:button type="submit"/>

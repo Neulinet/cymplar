@@ -54,7 +54,11 @@ public class UserProfilePortlet extends MVCPortlet {
 		String oldPassword = ParamUtil.getString(request, "password0"); //getUpdateUserPassword(request, user.getUserId());
 		String newPassword1 = ParamUtil.getString(request, "password1");
 		String newPassword2 = ParamUtil.getString(request, "password2");
-
+		String jobTitle = ParamUtil.getString(request,  "jobTitle");
+		
+		user.setJobTitle(jobTitle);
+		UserLocalServiceUtil.updateUser(user);
+		
 		if (Validator.isNotNull(newPassword1) || Validator.isNotNull(newPassword2)) {
 			log.info("Attempt to change password for user " + user.getScreenName() + "(" + user.getUserId() + ")");
 

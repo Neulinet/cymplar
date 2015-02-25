@@ -108,6 +108,9 @@ else {
 	
 	<aui:input name="jobTitle" />
 	
+	<aui:model-context bean="<%= user.getContact() %>" model="<%= Contact.class %>" />
+	<aui:input label="facebook" name="facebookSn" />
+	
 	<aui:button-row>
 		<aui:button type="submit"/>
 	</aui:button-row>

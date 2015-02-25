@@ -19,9 +19,11 @@ import com.liferay.portal.kernel.util.PropsUtil;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.model.Contact;
 import com.liferay.portal.model.User;
 import com.liferay.portal.security.auth.AuthException;
 import com.liferay.portal.security.auth.Authenticator;
+import com.liferay.portal.service.ContactLocalServiceUtil;
 import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
@@ -55,9 +57,14 @@ public class UserProfilePortlet extends MVCPortlet {
 		String newPassword1 = ParamUtil.getString(request, "password1");
 		String newPassword2 = ParamUtil.getString(request, "password2");
 		String jobTitle = ParamUtil.getString(request,  "jobTitle");
+		String facebookSn = ParamUtil.getString(request,  "facebookSn");
 		
 		user.setJobTitle(jobTitle);
 		UserLocalServiceUtil.updateUser(user);
+
+		Contact contact = user.getContact();
+		contact.setFacebookSn(facebookSn);
+		ContactLocalServiceUtil.updateContact(contact);
 		
 		if (Validator.isNotNull(newPassword1) || Validator.isNotNull(newPassword2)) {
 			log.info("Attempt to change password for user " + user.getScreenName() + "(" + user.getUserId() + ")");

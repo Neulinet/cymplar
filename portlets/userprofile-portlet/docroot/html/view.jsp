@@ -95,21 +95,26 @@ else {
 </liferay-ui:error>
 	<aui:model-context bean="<%= selUser %>" model="<%= User.class %>" />
 	
-	<aui:input autocomplete="off" label="current-password" name="password0" size="30" type="password" />
-
-	<aui:input autocomplete="off" label="new-password" name="password1" size="30" type="password" />
-
-	<aui:input autocomplete="off" label="enter-again" name="password2" size="30" type="password">
-		<aui:validator name="equalTo">
-			'#<portlet:namespace />password1'
-		</aui:validator>
-	</aui:input>
-	
 	
 	<aui:input name="jobTitle" />
 	
 	<aui:model-context bean="<%= user.getContact() %>" model="<%= Contact.class %>" />
 	<aui:input label="facebook" name="facebookSn" />
+
+
+
+	<aui:fieldset label="change-password">
+		<aui:input autocomplete="off" label="current-password" name="password0" size="30" type="password" />
+	
+		<aui:input autocomplete="off" label="new-password" name="password1" size="30" type="password" />
+	
+		<aui:input autocomplete="off" label="enter-again" name="password2" size="30" type="password">
+			<aui:validator name="equalTo">
+				'#<portlet:namespace />password1'
+			</aui:validator>
+		</aui:input>
+	</aui:fieldset>
+
 	
 	<aui:button-row>
 		<aui:button type="submit"/>

@@ -566,4 +566,66 @@ body {
 */
 
 
+/* Styles for leads table
+*/
 
+.table-striped {
+	th { 
+		background:#EEEEEE;
+		color: #E74431;
+	}
+
+	tbody>tr:nth-child(2n+1)>td, tbody>tr:nth-child(2n+1)>th {
+		background-color: #F9F9F9 !important;
+	}
+	
+	.leads-date {
+		width: 10%;
+	}
+	
+	.leads-copany {
+		width: 10%;
+	}
+
+	.leads-contract {
+		width: 10%;
+	}
+
+	.leads-contact {
+		width: 10%;
+	}
+
+	.leads-method {
+		width: 10%;
+	}
+
+	.leads-progress {
+		width: 10%;
+	}
+
+	.leads-status {
+		width: 10%;
+	}
+
+	.leads-comments {
+		width: 30%;
+	}
+	
+	.leads-status-inactive {
+		font-style: italic;
+		text-decoration: line-through;
+	}
+	
+	.leads-status-cold {
+		font-style: italic;
+	}
+	
+	.leads-status-warm {
+		font-weight: bold;
+	}
+	
+	.leads-status-hot {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}

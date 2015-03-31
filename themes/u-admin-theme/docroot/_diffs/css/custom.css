@@ -583,8 +583,8 @@ body {
 		width: 10%;
 	}
 	
-	.leads-copany {
-		width: 10%;
+	.leads-company {
+		width: 9%;
 	}
 
 	.leads-contract {
@@ -600,15 +600,19 @@ body {
 	}
 
 	.leads-progress {
-		width: 10%;
+		width: 7.5%;
 	}
 
 	.leads-status {
-		width: 10%;
+		width: 8.5%;
 	}
 
 	.leads-comments {
-		width: 30%;
+		width: 25%;
+	}
+	
+	.leads-actions {
+		.width: 10%
 	}
 	
 	.leads-status-inactive {

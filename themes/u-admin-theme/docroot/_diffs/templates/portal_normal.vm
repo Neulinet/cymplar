@@ -16,7 +16,7 @@
 		$theme.include($body_top_include)
 		
 		## Removed since we do not need it
-		##dockbar()
+		#dockbar()
 		
 		<div class="container-fluid" id="wrapper">	
 			#if ($is_signed_in)

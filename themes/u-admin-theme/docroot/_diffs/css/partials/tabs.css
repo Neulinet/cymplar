@@ -5,7 +5,7 @@
 	.tabbable-content{
 
 		/*-- Leads Tab (#reportsearch_WAR_cordilleraportle) --*/
-		#searchReportForm {			
+		.searchReportForm {			
 			padding: 65px 0 0;
 			position: relative;			
 			.control-group {

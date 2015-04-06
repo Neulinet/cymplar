@@ -130,7 +130,7 @@
 			width: 100%;
 		}
 
-		.tabbable-content #searchReportForm .example {
+		.tabbable-content .searchReportForm .example {
 		    display: block;
 		    padding: 15px;
 		}
@@ -243,23 +243,23 @@
 		} 
 
 
-		.tabbable-content #searchReportForm{
+		.tabbable-content .searchReportForm{
 			padding: 15px 0;
 		}
 
-		.tabbable-content #searchReportForm .buttonBox{
+		.tabbable-content .searchReportForm .buttonBox{
 			position: relative;
 		}
-		.tabbable-content #searchReportForm .buttonBox button{
+		.tabbable-content .searchReportForm .buttonBox button{
 			margin: 0;
 		}
 
-		.tabbable-content #searchReportForm .example {
+		.tabbable-content .searchReportForm .example {
 		    display: block;
 		    padding: 15px;
 		}
 
-		.tabbable-content #searchReportForm .control-group {
+		.tabbable-content .searchReportForm .control-group {
 		    display: block;
 		    padding: 10px;
 		}

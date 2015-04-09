@@ -1,5 +1,8 @@
 package ru.emdev.cymplar.event;
 
+import io.intercom.api.Intercom;
+
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +12,8 @@ import com.liferay.portal.kernel.events.Action;
 import com.liferay.portal.kernel.events.ActionException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.PrefsPropsUtil;
+import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.model.User;
 import com.liferay.portal.model.UserGroup;
 import com.liferay.portal.service.UserGroupLocalServiceUtil;
@@ -37,6 +42,38 @@ public class PostLoginAction extends Action {
 
 		try {
 			User user = UserLocalServiceUtil.getUser(userId);
+			
+			
+			try {
+				boolean intercomEnabled = PrefsPropsUtil.getBoolean(companyId, "intercom-enabled", false);
+				String intercomAppId = PrefsPropsUtil.getString(companyId, "intercom-app-id");
+				String intercomApiKey = PrefsPropsUtil.getString(companyId, "intercom-api-key");
+
+				if (intercomEnabled && 
+						intercomAppId != null && !intercomAppId.isEmpty() &&
+						intercomApiKey != null && !intercomApiKey.isEmpty()) {
+					Date now = new Date();
+					
+					// initialize intercom
+					Intercom.setAppID(intercomAppId);
+					Intercom.setApiKey(intercomApiKey);
+					
+					// initialize user
+					io.intercom.api.User intercomUser = new io.intercom.api.User();
+					intercomUser.setEmail(user.getEmailAddress());
+					intercomUser.setName(user.getFullName());
+					intercomUser.setLastSeenIp(user.getLastLoginIP());
+					intercomUser.setSignedUpAt(user.getCreateDate().getTime());
+					intercomUser.setLastRequestAt(now.getTime());
+					
+					io.intercom.api.User.create(intercomUser);
+					
+					_log.debug("Sent notification to intercom");
+				}
+			} catch (Exception ex) {
+				_log.error("Cannot register user in intercom", ex);
+			}
+			
 			List<UserGroup> userGroups = UserGroupLocalServiceUtil
 					.getUserUserGroups(userId);
 			UserGroup membersGroup = null;

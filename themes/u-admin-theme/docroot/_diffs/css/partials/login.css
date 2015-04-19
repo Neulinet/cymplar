@@ -6,9 +6,11 @@
 	height: 100%;
 }
 
-.aui .signed-out .portlet-boundary{
+/*.aui .signed-out .portlet-boundary{
 	display: none;
 }
+*/
+
 .aui .signed-out .row-fluid [class*="span"]{
 	min-height: 0;
 }

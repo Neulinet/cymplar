@@ -19,7 +19,8 @@
 		## dockbar()
 		
 		<div class="container-fluid" id="wrapper">	
-			#if ($is_signed_in)
+			## This is workaround for terms of use page - but need to find better solution
+			#if ($is_signed_in || $layout.getFriendlyURL().equals("/terms"))
 			<div id="main" class="clearfix">
 				<header id="banner" role="banner">		
 					<div id="heading">

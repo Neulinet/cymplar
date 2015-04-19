@@ -177,8 +177,8 @@
 	</aui:fieldset>
 
 	<aui:button-row>
-		<aui:button type="submit" cssClass="btn btn-primary"/>
+		<aui:button type="submit" cssClass="btn btn-primary" value="Register"/>
 
-		<a href="<%= signInURL %>" class="btn btn-success"><liferay-ui:message key="login-button-title" /></a>
+		<a href="<%= signInURL %>" class="btn btn-success">Cancel</a>
 	</aui:button-row>
 </aui:form>

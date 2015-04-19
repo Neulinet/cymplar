@@ -175,7 +175,7 @@
 				<liferay-ui:captcha url="<%= captchaURL %>" />
 			</c:if>
 			
-			<p> By submitting registration form you confirm you agreed with our <a href="/terms">Terms Of Use</a>.
+			<p> By submitting registration form you confirm you agreed with our <a href="/terms" target="_blank">Terms Of Use</a>.
 	</aui:fieldset>
 
 	<aui:button-row>

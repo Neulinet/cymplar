@@ -103,14 +103,14 @@
 				</a>
 
 				<a id="<portlet:namespace/>login-btn-email" href="javascript:void(0);" class="btn btn-default"><liferay-ui:message key="email-button-title" /> <i class="fa fa-envelope"></i></a>
-			</div>
 			
-			<h5 class="page-header-sub">Don't have account yet?</h5>
-			<c:if test="<%= showCreateAccountIcon %>">
-				<a id="<portlet:namespace/>login-btn-register" class="btn btn-info" href="<%= registerURL %>">
-					<liferay-ui:message key="registration-button-title" />
-				</a>
-			</c:if>
+				<h5 class="page-header-sub">Don't have account yet?</h5>
+				<c:if test="<%= showCreateAccountIcon %>">
+					<a id="<portlet:namespace/>login-btn-register" class="btn btn-info" href="<%= registerURL %>">
+						<liferay-ui:message key="registration-button-title" />
+					</a>
+				</c:if>
+			</div>
 
 			<!-- END Login Buttons -->
 

@@ -62,7 +62,7 @@
 		padding-top: 10px;
 	}
 	a[id*='login-btn-facebook'],
-	a[id*='login-btn-register'] {
+	a[id*='login-btn-email'] {
 	    width: 128px;
 	    padding: 6px 0;
 	}
@@ -71,11 +71,11 @@
 	    margin: 0 6px 5px 0;
 	}
 
-	a[id*='login-btn-register'] {
+	a[id*='login-btn-email'] {
 	    margin: 0 0 5px;
 	}
 
-	a[id*='login-btn-email'] {
+	a[id*='login-btn-register'] {
 	    margin: 0;
 	    padding: 4px 0;
 	    width: 270px;

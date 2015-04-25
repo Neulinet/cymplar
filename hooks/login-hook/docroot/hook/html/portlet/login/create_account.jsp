@@ -133,7 +133,7 @@
 				<aui:input model="<%= User.class %>" name="screenName" />
 			</c:if>
 
-			<aui:input autoFocus="<%= true %>" model="<%= User.class %>" name="emailAddress">
+			<aui:input model="<%= User.class %>" name="emailAddress">
 				<c:if test="<%= PrefsPropsUtil.getBoolean(company.getCompanyId(), PropsKeys.USERS_EMAIL_ADDRESS_REQUIRED) %>">
 					<aui:validator name="required" />
 				</c:if>
@@ -182,5 +182,11 @@
 		<aui:button type="submit" cssClass="btn btn-primary" value="Register"/>
 
 		<a href="<%= signInURL %>" class="btn btn-success">Cancel</a>
+		
+		<portlet:renderURL var="forgotPasswordURL">
+			<portlet:param name="struts_action" value="/login/forgot_password"/>
+		</portlet:renderURL>
+		
+		<a href="<%= forgotPasswordURL %>" class="btn btn-success">Forgot Password?</a>
 	</aui:button-row>
 </aui:form>

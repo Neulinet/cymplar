@@ -20,7 +20,7 @@
 		
 		<div class="container-fluid" id="wrapper">	
 			## This is workaround for terms of use page - but need to find better solution
-			#if ($is_signed_in || $layout.getFriendlyURL().equals("/terms"))
+			#if ($is_signed_in)
 			<div id="main" class="clearfix">
 				<header id="banner" role="banner">		
 					<div id="heading">
@@ -67,6 +67,8 @@
 					<nav id="breadcrumbs"><a href="$site_default_url"><i class="fa fa-home home-link"></i></a>#breadcrumbs()</nav>			
 						##parse ("$full_templates_path/temp.vm")	
 
+		#end
+		
 					#if ($selectable)
 						$theme.include($content_include)
 					#else
@@ -74,41 +76,22 @@
 						$portletDisplay.setTitle($the_title)
 						$theme.wrapPortlet("portlet.vm", $content_include)
 					#end	
-					
+		
+		#if ($is_signed_in)			
 				</div>	
 			</div>
 			<a id="to-top" href="#"><i class="fa fa-chevron-up"></i></a>
-			#else
-				<div class="login">	
-					<div id="login-container">
-						<div id="login-logo">
-						    <a href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
-								<img alt="$logo_description" src="$images_folder/u_admin/medium_logo.png"  />				
-							</a>
-						</div>
+		#end
+		
 
-						$velocityPortletPreferences.setValue("portletSetupShowBorders", "false")
-	                    $theme.runtime("58", "", $velocityPortletPreferences.toString())
-	                    $velocityPortletPreferences.reset()
-	                    
-
-		                #if ($selectable)
-							$theme.include($content_include)
-						#else
-							$portletDisplay.recycle()
-							$portletDisplay.setTitle($the_title)
-							$theme.wrapPortlet("portlet.vm", $content_include)
-						#end
-					
-                    </div>
-				</div>
-			#end
 		</div>
+		
 		#if ($is_signed_in)	
 		<footer id="footer" role="contentinfo">	
 			<p>2013-14 &copy; <span>uAdmin 2.0</span> - Crafted with<span><i class="fa fa-heart text-danger"></i>pixelcave</span></p> 
 		</footer>
 		#end
+		
 		#js("$javascript_folder/bootstrap-tooltip.js")
 		$theme.include($body_bottom_include)
 		$theme.include($bottom_include)

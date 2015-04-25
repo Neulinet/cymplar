@@ -17,25 +17,25 @@
 <%@ include file="/html/portlet/login/init.jsp" %>
 
 <%
-	User user2 = (User) request.getAttribute(WebKeys.FORGOT_PASSWORD_REMINDER_USER);
+User user2 = (User)request.getAttribute(WebKeys.FORGOT_PASSWORD_REMINDER_USER);
 
-	if (Validator.isNull(authType)) {
-		authType = company.getAuthType();
-	}
+if (Validator.isNull(authType)) {
+	authType = company.getAuthType();
+}
 
-	Integer reminderAttempts = (Integer) portletSession.getAttribute(WebKeys.FORGOT_PASSWORD_REMINDER_ATTEMPTS);
+Integer reminderAttempts = (Integer)portletSession.getAttribute(WebKeys.FORGOT_PASSWORD_REMINDER_ATTEMPTS);
 
-	if (reminderAttempts == null) {
-		reminderAttempts = 0;
-	}
+if (reminderAttempts == null) {
+	reminderAttempts = 0;
+}
 
-	String signInURL = themeDisplay.getURLSignIn();
+String signInURL = themeDisplay.getURLSignIn();
 	if (portletName.equals(PortletKeys.FAST_LOGIN)) {
 		signInURL = HttpUtil.addParameter(signInURL, "windowState", LiferayWindowState.POP_UP.toString());
 	}
 %>
 
-<portlet:actionURL var="forgotPasswordURL">
+<portlet:actionURL var="forgotPasswordURL" windowState="<%= WindowState.MAXIMIZED.toString() %>">
 	<portlet:param name="struts_action" value="/login/forgot_password" />
 </portlet:actionURL>
 
@@ -155,5 +155,8 @@
 	</aui:fieldset>
 
 	<a href="<%= signInURL %>" class="btn btn-success"><liferay-ui:message key="login-button-title" /></a>
-
+	
 </aui:form>
+
+
+

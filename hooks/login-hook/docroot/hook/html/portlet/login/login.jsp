@@ -16,6 +16,14 @@
 
 <%@ include file="/html/portlet/login/init.jsp" %>
 
+
+
+		<div id="login-logo">
+		    <a href="/">
+				<img src='<%= themeDisplay.getPathThemeImages() + "/u_admin/medium_logo.png"%>'  />				
+			</a>
+		</div>
+						
 <c:choose>
 	<c:when test="<%= themeDisplay.isSignedIn() %>">
 
@@ -254,3 +262,6 @@
 		</aui:script>
 	</c:otherwise>
 </c:choose>
+
+
+

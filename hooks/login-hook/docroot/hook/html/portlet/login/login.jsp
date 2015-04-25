@@ -98,7 +98,8 @@
 		%>
 		<c:set value="" var="hide"/>
 		<c:set value="" var="show"/>
-		<c:if test='<%= SessionMessages.contains(request, "userAdded") %>'>
+		
+		<c:if test='<%= SessionMessages.contains(request, "userAdded") || !SessionErrors.isEmpty(renderRequest)%>'>
 			<c:set value="display:none;" var="hide"/>
 			<c:set value="display:block;" var="show"/>
 		</c:if>

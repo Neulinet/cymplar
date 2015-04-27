@@ -25,6 +25,11 @@
 	a:focus {
 		outline: none;
 	}
+	
+	input[readonly] {
+		cursor: auto;
+	}
+	
 	.separator {
 		border-color: #BFBFBF transparent #FFF;
 		border-style: solid;

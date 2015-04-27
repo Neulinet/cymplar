@@ -96,13 +96,11 @@
 
 			String registerURL = PortalUtil.getCreateAccountURL(request, themeDisplay);
 		%>
-		<c:set value="" var="hide"/>
-		<c:set value="" var="show"/>
 		
-		<c:if test='<%= SessionMessages.contains(request, "userAdded") || !SessionErrors.isEmpty(renderRequest)%>'>
-			<c:set value="display:none;" var="hide"/>
-			<c:set value="display:block;" var="show"/>
-		</c:if>
+		<c:set value="display:none;" var="hide"/>
+		<c:set value="display:block;" var="show"/>
+		
+		
 		<div id="<portlet:namespace/>login-container">
 			<!-- Login Buttons -->
 			<div id="<portlet:namespace/>login-buttons" style="${hide}">
@@ -112,13 +110,6 @@
 				</a>
 
 				<a id="<portlet:namespace/>login-btn-email" href="javascript:void(0);" class="btn btn-default"><liferay-ui:message key="email-button-title" /> <i class="fa fa-envelope"></i></a>
-			
-				<h5 class="page-header-sub">Don't have account yet?</h5>
-				<c:if test="<%= showCreateAccountIcon %>">
-					<a id="<portlet:namespace/>login-btn-register" class="btn btn-info" href="<%= registerURL %>">
-						<liferay-ui:message key="registration-button-title" />
-					</a>
-				</c:if>
 			</div>
 
 			<!-- END Login Buttons -->
@@ -246,6 +237,13 @@
 					</div>
 				</div>
 			</aui:form>
+
+				<h5 class="page-header-sub">Don't have account yet?</h5>
+				<c:if test="<%= showCreateAccountIcon %>">
+					<a id="<portlet:namespace/>login-btn-register" class="btn btn-info" href="<%= registerURL %>">
+						<liferay-ui:message key="registration-button-title" />
+					</a>
+				</c:if>
 
 		</div>
 

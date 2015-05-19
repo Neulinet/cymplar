@@ -653,7 +653,16 @@ body {
 			width: 206px;
 		}
 		.portlet-login .form-horizontal .control-group {
-			display: inline-block;
+			display: block;
+			.form-validator-stack.help-inline {
+				display: block !important;
+				text-align: center !important;
+				margin-top: 0 !important;
+			}
+		}
+		.portlet-login .form-horizontal .control-label {
+			text-align: center;
+			width: 100%;
 		}
 		.create-account .control-group input.field, .form-validator-stack.help-inline, .create-account .taglib-captcha .captcha, .create-account .taglib-captcha .refresh {
 			max-width: 100% !important;
@@ -672,10 +681,6 @@ body {
 			margin-top: 0px;
 			display: inline-block;
 			width: auto;
-		}
-		.form-horizontal .control-label {
-			float: none;
-			text-align: center;
 		}
 	}
 	@include respond-to(phone) {

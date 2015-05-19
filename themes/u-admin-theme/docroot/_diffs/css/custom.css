@@ -638,3 +638,30 @@ body {
 		text-decoration: underline;
 	}
 }
+
+
+/* Adaptation */
+
+.aui {
+	@include respond-to(phone, tablet) {
+		.portlet-login .input-append input[type="text"] {
+			width: 206px;
+		}
+		.portlet-login a[id*="login-button-pass"], #portlet_new-password a[id*="login-button-pass"], .portlet-login #login, #portlet_new-password #login {
+			width: auto;
+			margin-top: 0;
+		}
+		.portlet-login a[id*="login-btn-register"], #portlet_new-password a[id*="login-btn-register"], .button-holder .btn {
+			font-size: 14px;
+		}
+		.portlet-login .form .button-holder .btn {
+			padding: 6px 12px;
+		}
+	}
+	@include respond-to(phone) {
+		.create-account .control-group input.field, .form-validator-stack.help-inline, .create-account .taglib-captcha .captcha, .create-account .taglib-captcha .refresh {
+			float: left;
+			max-width: 100% !important;
+		}
+	}
+}

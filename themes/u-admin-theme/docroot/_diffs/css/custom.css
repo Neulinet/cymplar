@@ -694,9 +694,14 @@ body {
 			display: block;
 			.collapse.nav-collapse {
 				overflow: visible;
+				height: auto;
+				.nav.nav-collapse {
+					overflow: visible;
+					height: auto;
+				}
 			}
 			.nav {
-				margin: 0px 10px;
+				margin: 0px 10px 10px 10px;
 				.counter {
 					right: -7px;
 					top: -4px;
@@ -704,7 +709,8 @@ body {
 			}
 			.nav li {
 				display: inline-block;
-				margin-right: 6px;
+				margin-right: 4px;
+				margin-top: 4px;
 			}
 			.nav > li > a {
 				padding: 5px 15px 5px 10px;
@@ -725,6 +731,9 @@ body {
 		}
 		.portlet-borderless-container {
 			padding: 3px 0px;
+		}
+		.portlet-boundary_56_ .portlet-borderless-container .journal-content-article .active {
+			text-align: center;
 		}
 	}
 	@include respond-to(phone) {

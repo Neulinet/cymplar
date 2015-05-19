@@ -654,6 +654,7 @@ body {
 		}
 		.portlet-login .form-horizontal .control-group {
 			display: block;
+			margin-bottom: 5px;
 			.form-validator-stack.help-inline {
 				display: block !important;
 				text-align: center !important;
@@ -671,16 +672,59 @@ body {
 			width: auto;
 			margin-top: 0;
 		}
-		.portlet-login a[id*="login-btn-register"], #portlet_new-password a[id*="login-btn-register"], .button-holder .btn, .portlet-login .btn.btn-success {
+		.portlet-login a[id*="login-btn-register"], #portlet_new-password a[id*="login-btn-register"], .button-holder .btn, .portlet-login .btn.btn-success,
+		.buton-wrap .btn {
 			font-size: 14px;
 		}
-		.portlet-login .form .button-holder .btn, .portlet-login .btn.btn-success {
+		.portlet-login .form .button-holder .btn, .portlet-login .btn.btn-success, .buton-wrap .btn {
 			padding: 6px 12px;
 		}
 		.portlet-login .form fieldset .button-holder .btn, .portlet-login .form fieldset .btn.btn-success {
 			margin-top: 0px;
 			display: inline-block;
 			width: auto;
+		}
+		.columns-2 .portlet-column-first.span8, .columns-2 .portlet-column-last.span4 {
+			width: 100%;
+			padding: 20px 10px;
+			float: none;
+			margin: 0;
+		}
+		#navigation {
+			display: block;
+			.collapse.nav-collapse {
+				overflow: visible;
+			}
+			.nav {
+				margin: 0px 10px;
+				.counter {
+					right: -7px;
+					top: -4px;
+				}
+			}
+			.nav li {
+				display: inline-block;
+				margin-right: 6px;
+			}
+			.nav > li > a {
+				padding: 5px 15px 5px 10px;
+			}
+		}
+		#search {
+			padding: 10px;
+			input[type="image"] {
+				right: 20px;
+				top: 20px;
+			}
+			input[type="text"] {
+    			margin-bottom: -5px;
+			}
+		}
+		.lfr-search-container {
+			margin-top: 0em;
+		}
+		.portlet-borderless-container {
+			padding: 3px 0px;
 		}
 	}
 	@include respond-to(phone) {

@@ -36,7 +36,8 @@
 		border-width: 1px 0;
 	}
 	#wrapper {
-		position: relative;			
+		position: relative;
+		height: auto !important;		
 	}
 	.site-title {
 		a:hover {
@@ -644,8 +645,17 @@ body {
 
 .aui {
 	@include respond-to(phone, tablet) {
+		.portlet-login #_58_login-buttons .btn {
+			display: inline-block;
+		}
 		.portlet-login .input-append input.field {
 			width: 206px;
+		}
+		.portlet-login .form-horizontal .control-group {
+			display: inline-block;
+		}
+		.create-account .control-group input.field, .form-validator-stack.help-inline, .create-account .taglib-captcha .captcha, .create-account .taglib-captcha .refresh {
+			max-width: 100% !important;
 		}
 		.portlet-login a[id*="login-button-pass"], #portlet_new-password a[id*="login-button-pass"], .portlet-login #login, #portlet_new-password #login {
 			width: auto;
@@ -656,16 +666,19 @@ body {
 		}
 		.portlet-login .form .button-holder .btn, .portlet-login .btn.btn-success {
 			padding: 6px 12px;
-		}
-	}
-	@include respond-to(phone) {
-		.create-account .control-group input.field, .form-validator-stack.help-inline, .create-account .taglib-captcha .captcha, .create-account .taglib-captcha .refresh {
-			float: left;
-			max-width: 100% !important;
+			margin-top: 0px;
+			display: inline-block;
+			width: auto;
 		}
 		.create-account .form-horizontal .control-label {
 			text-align: left;
 			float: none;
+			text-align: center;
+		}
+	}
+	@include respond-to(phone) {
+		.portlet-login, #portlet_new-password {
+			padding: 0px;
 		}
 	}
 }

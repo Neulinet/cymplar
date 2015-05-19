@@ -37,7 +37,8 @@
 	}
 	#wrapper {
 		position: relative;
-		height: auto !important;		
+		height: auto !important;
+		min-height: 100%;	
 	}
 	.site-title {
 		a:hover {
@@ -666,12 +667,13 @@ body {
 		}
 		.portlet-login .form .button-holder .btn, .portlet-login .btn.btn-success {
 			padding: 6px 12px;
+		}
+		.portlet-login .form fieldset .button-holder .btn, .portlet-login .form fieldset .btn.btn-success {
 			margin-top: 0px;
 			display: inline-block;
 			width: auto;
 		}
-		.create-account .form-horizontal .control-label {
-			text-align: left;
+		.form-horizontal .control-label {
 			float: none;
 			text-align: center;
 		}

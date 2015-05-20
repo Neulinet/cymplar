@@ -88,7 +88,7 @@
 		
 		#if ($is_signed_in)	
 		<footer id="footer" role="contentinfo">	
-			<p>2013-14 &copy; <span>uAdmin 2.0</span> - Crafted with<span><i class="fa fa-heart text-danger"></i>pixelcave</span></p> 
+			<p>2013-15 &copy; <span>CYMPLAR</span></p>  
 		</footer>
 		#end
 		

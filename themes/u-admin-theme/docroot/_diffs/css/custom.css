@@ -740,6 +740,15 @@ body {
 		.portlet-boundary_reportsearch_WAR_cordilleraportlet_ select {
 			width: 100%;
 		}
+		.tabbable-content .searchReportForm .buttonBox,
+		.tabbable-content #reportManagerForm .buttonBox {
+			padding: 0px 10px 15px;
+			button {
+				margin-top: 4px !important;
+				font-size: 14px;
+				padding: 7px 19px;
+			}
+		}
 	}
 	@include respond-to(phone) {
 		.portlet-login, #portlet_new-password {
@@ -765,12 +774,6 @@ body {
 		}
 		.tabbable-content .searchReportForm .control-group {
 			padding: 3px 10px;
-		}
-		.tabbable-content .searchReportForm .buttonBox {
-			padding: 0px 10px 15px;
-			button {
-				margin-top: 4px;
-			}
 		}
 	}
 }

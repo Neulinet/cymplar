@@ -656,9 +656,8 @@ body {
 			display: block;
 			margin-bottom: 5px;
 			.form-validator-stack.help-inline {
-				display: block !important;
-				text-align: center !important;
-				margin-top: 0 !important;
+				display: block;
+				text-align: center;
 			}
 		}
 		.portlet-login .form-horizontal .control-label {
@@ -686,7 +685,7 @@ body {
 		}
 		.columns-2 .portlet-column-first.span8, .columns-2 .portlet-column-last.span4 {
 			width: 100%;
-			padding: 20px 10px;
+			padding: 10px 10px;
 			float: none;
 			margin: 0;
 		}
@@ -734,11 +733,29 @@ body {
 		}
 		.portlet-boundary_56_ .portlet-borderless-container .journal-content-article .active {
 			text-align: center;
+			input[type="text"] {
+				width: 80%;
+			}
 		}
 	}
 	@include respond-to(phone) {
 		.portlet-login, #portlet_new-password {
 			padding: 0px;
+		}
+		.nav-tabs > li > a {
+			padding-right: 8px;
+			padding-left: 7px;
+			margin-right: 1px;
+			line-height: 16px;
+			font-size: 13px;
+		}
+		#breadcrumbs, .alert {
+			margin-bottom: 10px;
+		}
+		.portlet-boundary_56_ .portlet-borderless-container .journal-content-article .active {
+			br {
+				display: none;
+			}
 		}
 	}
 }

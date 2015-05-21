@@ -672,7 +672,7 @@ body {
 			margin-top: 0;
 		}
 		.portlet-login a[id*="login-btn-register"], #portlet_new-password a[id*="login-btn-register"], .button-holder .btn, .portlet-login .btn.btn-success,
-		.buton-wrap .btn {
+		.buton-wrap .btn, select, .tabbable-content .searchReportForm .control-group input.field[type="text"] {
 			font-size: 14px;
 		}
 		.portlet-login .form .button-holder .btn, .portlet-login .btn.btn-success, .buton-wrap .btn {
@@ -737,6 +737,9 @@ body {
 				width: 80%;
 			}
 		}
+		.portlet-boundary_reportsearch_WAR_cordilleraportlet_ select {
+			width: 100%;
+		}
 	}
 	@include respond-to(phone) {
 		.portlet-login, #portlet_new-password {
@@ -755,6 +758,18 @@ body {
 		.portlet-boundary_56_ .portlet-borderless-container .journal-content-article .active {
 			br {
 				display: none;
+			}
+		}
+		.modal-footer .btn + .btn {
+			margin-left: 0px;
+		}
+		.tabbable-content .searchReportForm .control-group {
+			padding: 3px 10px;
+		}
+		.tabbable-content .searchReportForm .buttonBox {
+			padding: 0px 10px 15px;
+			button {
+				margin-top: 4px;
 			}
 		}
 	}

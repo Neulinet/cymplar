@@ -792,9 +792,18 @@ body {
 					right: -5px;
 					top: -5px;
 				}
+				.dropdown-menu {
+					line-height: 12px;
+					padding: 8px 9px;
+					z-index: 0;
+					a {
+						line-height: 12px;
+						padding: 8px 9px;
+					}
+				}
 			}
 			#search {
-				padding: 10px 70px 10px 115px;
+				margin: -35px 70px 10px 115px;
 				z-index: 50;
 				margin-top: -45px;
 				input[type="text"] {

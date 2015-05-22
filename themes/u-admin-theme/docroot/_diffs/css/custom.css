@@ -751,6 +751,9 @@ body {
 		}
 	}
 	@include respond-to(phone) {
+		#banner {
+			z-index: 50;
+		}
 		.portlet-login, #portlet_new-password {
 			padding: 0px;
 		}
@@ -774,6 +777,25 @@ body {
 		}
 		.tabbable-content .searchReportForm .control-group {
 			padding: 3px 10px;
+		}
+		#navigation {
+			z-index: auto;
+			.nav {
+				margin: 6px 10px 10px;
+			}
+			#search {
+				padding: 10px 70px 10px 115px;
+				z-index: 50;
+				margin-top: -45px;
+				input[type="text"] {
+					border-radius: 4px;
+					border: 0px none;
+					background-color: rgb(99, 98, 98);
+				}
+				input[type="image"] {
+					display: none;
+				}
+			}
 		}
 	}
 }

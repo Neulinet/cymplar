@@ -781,7 +781,17 @@ body {
 		#navigation {
 			z-index: auto;
 			.nav {
-				margin: 6px 10px 10px;
+				margin: 5px 8px 7px;
+				li {
+					margin-right: 5px;
+				}
+				> li > a {
+					padding: 0px 10px 0px 5px;
+				}
+				.counter {
+					right: -5px;
+					top: -5px;
+				}
 			}
 			#search {
 				padding: 10px 70px 10px 115px;
@@ -791,6 +801,7 @@ body {
 					border-radius: 4px;
 					border: 0px none;
 					background-color: rgb(99, 98, 98);
+					height: 27px;
 				}
 				input[type="image"] {
 					display: none;

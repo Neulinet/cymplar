@@ -656,9 +656,8 @@ body {
 			display: block;
 			margin-bottom: 5px;
 			.form-validator-stack.help-inline {
-				display: block !important;
-				text-align: center !important;
-				margin-top: 0 !important;
+				display: block;
+				text-align: center;
 			}
 		}
 		.portlet-login .form-horizontal .control-label {
@@ -673,7 +672,7 @@ body {
 			margin-top: 0;
 		}
 		.portlet-login a[id*="login-btn-register"], #portlet_new-password a[id*="login-btn-register"], .button-holder .btn, .portlet-login .btn.btn-success,
-		.buton-wrap .btn {
+		.buton-wrap .btn, select, .tabbable-content .searchReportForm .control-group input.field[type="text"] {
 			font-size: 14px;
 		}
 		.portlet-login .form .button-holder .btn, .portlet-login .btn.btn-success, .buton-wrap .btn {
@@ -686,7 +685,7 @@ body {
 		}
 		.columns-2 .portlet-column-first.span8, .columns-2 .portlet-column-last.span4 {
 			width: 100%;
-			padding: 20px 10px;
+			padding: 10px 10px;
 			float: none;
 			margin: 0;
 		}
@@ -705,6 +704,10 @@ body {
 				.counter {
 					right: -7px;
 					top: -4px;
+				}
+				.dropdown-menu a {
+    				color: #A09F9B;
+    				line-height: 14px;
 				}
 			}
 			.nav li {
@@ -734,11 +737,87 @@ body {
 		}
 		.portlet-boundary_56_ .portlet-borderless-container .journal-content-article .active {
 			text-align: center;
+			input[type="text"] {
+				width: 80%;
+			}
+		}
+		.portlet-boundary_reportsearch_WAR_cordilleraportlet_ select {
+			width: 100%;
+		}
+		.tabbable-content .searchReportForm .buttonBox,
+		.tabbable-content #reportManagerForm .buttonBox {
+			padding: 0px 10px 15px;
+			button {
+				margin-top: 4px !important;
+				font-size: 14px;
+				padding: 7px 19px;
+			}
 		}
 	}
 	@include respond-to(phone) {
+		#banner {
+			z-index: 50;
+		}
 		.portlet-login, #portlet_new-password {
 			padding: 0px;
+		}
+		.nav-tabs > li > a {
+			padding-right: 8px;
+			padding-left: 7px;
+			margin-right: 1px;
+			line-height: 16px;
+			font-size: 13px;
+		}
+		#breadcrumbs, .alert {
+			margin-bottom: 10px;
+		}
+		.portlet-boundary_56_ .portlet-borderless-container .journal-content-article .active {
+			br {
+				display: none;
+			}
+		}
+		.modal-footer .btn + .btn {
+			margin-left: 0px;
+		}
+		.tabbable-content .searchReportForm .control-group {
+			padding: 3px 10px;
+		}
+		#navigation {
+			z-index: auto;
+			.nav {
+				margin: 5px 8px 7px;
+				li {
+					margin-right: 5px;
+				}
+				> li > a {
+					padding: 0px 10px 0px 5px;
+				}
+				.counter {
+					right: -5px;
+					top: -5px;
+				}
+				.dropdown-menu {
+					z-index: 0;
+					a {
+						line-height: 12px;
+						padding: 8px 9px;
+					}
+				}
+			}
+			#search {
+				margin: -45px 70px 0px 115px;
+				z-index: 50;
+				margin-top: -45px;
+				input[type="text"] {
+					border-radius: 4px;
+					border: 0px none;
+					background-color: rgb(99, 98, 98);
+					height: 27px;
+				}
+				input[type="image"] {
+					display: none;
+				}
+			}
 		}
 	}
 }
